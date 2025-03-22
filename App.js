@@ -1,20 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useEffect, useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./assets/Themes";
+import MainTabs from "./components/MainTabs";
+import * as Font from "expo-font";
 
-export default function App() {
+const loadFonts = async () => {
+  await Font.loadAsync({
+    "ABeeZee-Regular": require("./assets/fonts/ABeeZee-Regular.ttf"),
+    "PlayfairDisplay-VariableFont_wght": require("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf"),
+    "PingFang-SC-Regular": require("./assets/fonts/PingFang-SC-Regular.ttf"),
+  });
+};
+
+const App = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [fontsLoaded, setFontsLoaded] = useState(false); 
+
+  useEffect(() => {
+    loadFonts()
+      .then(() => setFontsLoaded(true)) 
+      .catch((error) => console.error(error));
+  }, []);
+
+  const toggleTheme = () => setIsDarkMode(!isDarkMode);
+  const currentTheme = isDarkMode ? darkTheme : lightTheme;
+  
+  if (!fontsLoaded) {
+    return null;
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider theme={currentTheme}>
+      <NavigationContainer>
+        <MainTabs toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+      </NavigationContainer>
+    </ThemeProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
