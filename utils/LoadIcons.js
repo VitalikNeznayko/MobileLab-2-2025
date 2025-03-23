@@ -5,6 +5,8 @@ import Search from "../assets/Icon/Search.svg";
 import Community from "../assets/Icon/Community.svg";
 import Chat from "../assets/Icon/Chat.svg";
 import UserProfile from "../assets/Icon/UserProfile.svg";
+import Mac from "../assets/Icon/Mac.svg";
+import Windows from "../assets/Icon/Windows.svg";
 
 export const LoadIcons = () => {
   return [
@@ -15,6 +17,8 @@ export const LoadIcons = () => {
     { name: "Community", Icon: Community },
     { name: "Chat", Icon: Chat },
     { name: "UserProfile", Icon: UserProfile },
+    { name: "Mac", Icon: Mac },
+    { name: "Windows", Icon: Windows },
   ];
 };
 

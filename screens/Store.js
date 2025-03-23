@@ -8,12 +8,17 @@ import {
   StatusBar,
 } from "react-native";
 import MainView from "../components/MainView";
-
+import GameList from "../components/GameList";
+import { TabList } from "../components/TabList";
 
 export default function Store() {
   return (
     <MainView>
-      <ScrollView></ScrollView>
+      <TabList
+        tabList={["Top Sellers", "Free to play", "Early Access", "Action"]}
+      ></TabList>
+      {/* <GameList></GameList> */}
     </MainView>
   );
 }
+

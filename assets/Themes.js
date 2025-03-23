@@ -3,8 +3,8 @@ export const lightTheme = {
   background: "#F8FAFC",
   text: "black",
   tabBar: "white",
-  tabList: "#9AA6B2",
-  tabListActive: "#BCCCDC",
+  tabList: "rgb(53, 73, 139)",
+  tabListActive: "#31BCFC",
   strip: "#BCCCDC",
   barStyle: "dark-content",
 };
@@ -15,7 +15,7 @@ export const darkTheme = {
   text: "white",
   tabBar: "#12141C",
   tabList: "rgb(48,54,73)",
-  tabListActive: "#2d6cdf",
+  tabListActive: "#31BCFC",
   strip: "#171a24",
   barStyle: "light-content",
 };

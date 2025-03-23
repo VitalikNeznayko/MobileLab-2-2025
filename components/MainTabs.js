@@ -7,7 +7,6 @@ import Community from "../screens/Community";
 import Chat from "../screens/Chat";
 import Safety from "../screens/Safety";
 import UserProfile from "../screens/UserProfile";
-import { useTheme } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator();
 
