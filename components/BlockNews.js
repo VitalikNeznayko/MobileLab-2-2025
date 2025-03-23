@@ -11,9 +11,9 @@ const BlockNews = () => {
   const [News, setNews] = useState(initialNews);
 
   const loadMoreNews = () => {
-    const moreNews = initialNews.map((game, index) => ({
-      ...game,
-      name: `${game.name}`,
+    const moreNews = initialNews.map((news, index) => ({
+      ...news,
+      news: `${game.news}`,
     }));
     setNews((prevNews) => [...prevNews, ...moreNews]);
   };
@@ -82,7 +82,6 @@ const SmallStrip = styled.View`
   height: 1px;
   color: white;
   background-color: #303649;
-  ${"" /* change for white theme */}
   margin: 12px 0;
 `;
 const СonInteract = styled.View`

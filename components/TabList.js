@@ -1,9 +1,10 @@
-import styled from "styled-components/native";
+import styled, { useTheme } from "styled-components/native";
 import React, { useState } from "react";
 import { GetIcon } from "../utils/LoadIcons";
 
 export const TabList = ({ tabList }) => {
-  const [activeTab, setActiveTab] = useState(tabList[1]);
+  const theme = useTheme();
+  const [activeTab, setActiveTab] = useState(tabList[0]);
 
   const handleTabPress = (tab) => {
     setActiveTab(tab);
@@ -17,9 +18,7 @@ export const TabList = ({ tabList }) => {
           selected={activeTab === tab}
           onPress={() => handleTabPress(tab)}
         >
-          <TabText>
-            {GetIcon(tab, 16, "transparent", "transparent") || tab}
-          </TabText>
+          <TabText>{GetIcon(tab, 16, "white", "transparent") || tab}</TabText>
         </Tab>
       ))}
     </TabsContainer>

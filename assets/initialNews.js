@@ -2,7 +2,7 @@ const initialNews = [
   {
     user: "Eurogamer",
     date: "yesterday • 11:20 pm",
-    iconUser: require("../assets/Icon/Eurogamer.png"),
+    iconUser: require("../assets/Icon/Users/Eurogamer.png"),
     image: require("../assets/ImgGame/KingdomComeDeliverance.png"),
     title:
       "Florida tourist attraction sues Fortnite, seeks removal of in-game castle",
@@ -14,7 +14,7 @@ const initialNews = [
   {
     user: "Eurogamer",
     date: "yesterday • 8:20 am",
-    iconUser: require("../assets/Icon/Eurogamer.png"),
+    iconUser: require("../assets/Icon/Users/Eurogamer.png"),
     image: require("../assets/ImgGame/DeadByDaylight.png"),
     title:
       "Florida tourist attraction sues Fortnite, seeks removal of in-game castle",
@@ -25,7 +25,7 @@ const initialNews = [
   },
   {
     user: "Eurogamer",
-    iconUser: require("../assets/Icon/Eurogamer.png"),
+    iconUser: require("../assets/Icon/Users/Eurogamer.png"),
     date: "yesterday • 2:20 pm",
     image: require("../assets/ImgGame/BattlefieldHardLine.png"),
     title:

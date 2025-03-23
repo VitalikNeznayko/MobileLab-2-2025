@@ -3,9 +3,11 @@ export const lightTheme = {
   background: "#F8FAFC",
   text: "black",
   tabBar: "white",
-  tabList: "rgb(53, 73, 139)",
+  tabList: "rgb(89, 110, 178)",
   tabListActive: "#31BCFC",
-  strip: "#BCCCDC",
+  selectListDeactive: "#D9E2EC",
+  selectListActive: "#31BCFC",
+  strip: "rgb(202, 202, 202)",
 };
 
 export const darkTheme = {
@@ -13,7 +15,9 @@ export const darkTheme = {
   background: "#1C202C",
   text: "white",
   tabBar: "#12141C",
-  tabList: "rgb(48,54,73)",
   tabListActive: "#31BCFC",
+  tabList: "rgb(48,54,73)",
+  selectListActive: "#1C202C",
+  selectListDeactive: "#303649",
   strip: "#171a24",
 };

@@ -14,6 +14,7 @@ export default function Community() {
       <View
         style={{
           paddingHorizontal: 20,
+          marginBottom: 16
         }}
       >
         <TabList
