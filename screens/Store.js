@@ -3,7 +3,7 @@ import MainView from "../components/MainView";
 import GameList from "../components/GameList";
 import { TabList } from "../components/TabList";
 import { ScrollGame } from "../components/ScrollGame";
-import styled from "styled-components/native";
+
 export default function Store() {
   return (
     <MainView>
@@ -11,7 +11,7 @@ export default function Store() {
       <TabList
         tabList={["Top Sellers", "Free to play", "Early Access", "Action"]}
       ></TabList>
-        <GameList></GameList>
+      <GameList></GameList>
     </MainView>
   );
 }

@@ -6,7 +6,6 @@ export const lightTheme = {
   tabList: "rgb(53, 73, 139)",
   tabListActive: "#31BCFC",
   strip: "#BCCCDC",
-  barStyle: "dark-content",
 };
 
 export const darkTheme = {
@@ -17,5 +16,4 @@ export const darkTheme = {
   tabList: "rgb(48,54,73)",
   tabListActive: "#31BCFC",
   strip: "#171a24",
-  barStyle: "light-content",
 };

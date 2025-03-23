@@ -7,6 +7,9 @@ import Chat from "../assets/Icon/Chat.svg";
 import UserProfile from "../assets/Icon/UserProfile.svg";
 import Mac from "../assets/Icon/Mac.svg";
 import Windows from "../assets/Icon/Windows.svg";
+import Share from "../assets/Icon/Share.svg";
+import Message from "../assets/Icon/Message.svg";
+import Like from "../assets/Icon/Like.svg";
 
 export const LoadIcons = () => {
   return [
@@ -19,6 +22,9 @@ export const LoadIcons = () => {
     { name: "UserProfile", Icon: UserProfile },
     { name: "Mac", Icon: Mac },
     { name: "Windows", Icon: Windows },
+    { name: "Like", Icon: Like },
+    { name: "Share", Icon: Share },
+    { name: "Message", Icon: Message },
   ];
 };
 

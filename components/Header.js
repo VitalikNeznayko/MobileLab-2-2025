@@ -32,7 +32,7 @@ const HeaderView = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px 20px 18px 20px;
+  padding: 40px 20px 0 20px;
   margin-top: 0px;
   background-color: ${(props) => props.theme.background};
   align-items: center;

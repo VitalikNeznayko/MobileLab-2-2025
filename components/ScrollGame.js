@@ -57,7 +57,7 @@ export const ScrollGame = () => {
 const ScrollGames = styled.ScrollView`
   min-height: 230px;
   margin-bottom: 15px;
-
+  margin-top: 30px;
 `;
 const ContainerFullGame = styled.View`
   margin-right: 10px;

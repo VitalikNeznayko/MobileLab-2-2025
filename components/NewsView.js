@@ -1,9 +1,9 @@
 import styled from "styled-components/native";
 
-const MainView = styled.View`
+const NewsView = styled.View`
   flex: 1;
   background-color: ${(props) => props.theme.background};
-  padding: 0 20px;
+  width: 100%;
 `;
 
-export default MainView;
+export default NewsView;
