@@ -8,7 +8,7 @@ export const lightTheme = {
   selectListDeactive: "#D9E2EC",
   selectListActive: "#31BCFC",
   strip: "rgb(202, 202, 202)",
-  buttonOption: "#585C68",
+  buttonOption:"rgb(181, 181, 181)",
 };
 
 export const darkTheme = {

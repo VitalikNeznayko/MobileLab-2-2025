@@ -94,7 +94,7 @@ const CodeText = styled.Text`
   font-weight: 700;
   font-size: 54px;
   letter-spacing: 5.52px;
-  color: ${(props) => props.theme.text};
+  color: white;
 `;
 
 const ProgressBarContainer = styled.View`

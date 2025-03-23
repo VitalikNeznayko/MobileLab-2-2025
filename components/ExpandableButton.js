@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 
-const ExpandableButton = ({ title, info }) => {
+const ExpandableButton = ({ title, info, toggleTheme = "" }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleInfo = () => {
-    setIsVisible((prev) => !prev); 
+    setIsVisible((prev) => !prev);
   };
 
   return (
@@ -16,11 +16,16 @@ const ExpandableButton = ({ title, info }) => {
         <ButtonActive>{isVisible ? "^" : ">"}</ButtonActive>
       </StyledButton>
 
-      {isVisible && (
-        <ExpandedInfo>
-          <ButtonText>{info}</ButtonText>
-        </ExpandedInfo>
-      )}
+      {isVisible &&
+        (info != "" ? (
+          <ExpandedInfo>
+            <ButtonText>{info}</ButtonText>
+          </ExpandedInfo>
+        ) : (
+          <ThemedPress onPress={toggleTheme}>
+            <ButtonText>Click on me to change theme</ButtonText>
+          </ThemedPress>
+        ))}
     </Container>
   );
 };
@@ -34,7 +39,7 @@ const ButtonActive = styled.Text`
   font-size: 20px;
   line-height: 22px;
   letter-spacing: -0.32px;
-  color:rgb(96, 108, 123) ;
+  color: rgb(96, 108, 123);
 `;
 const StyledButton = styled(TouchableOpacity)`
   width: 100%;
@@ -47,7 +52,15 @@ const StyledButton = styled(TouchableOpacity)`
   flex-direction: row;
   align-items: center;
 `;
-
+const ThemedPress = styled(TouchableOpacity)`
+  width: 100%;
+  height: 54px;
+  border-width: 1px;
+  border-color: #202532;
+  background-color: ${(props) => props.theme.strip};
+  justify-content: space-between;
+  padding: 16px 16px;
+`;
 const ButtonText = styled.Text`
   font-family: "ABeeZee-Regular";
   font-weight: 400;
