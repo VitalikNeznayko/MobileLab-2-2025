@@ -28,7 +28,8 @@ export const TabList = ({ tabList }) => {
 
 const TabsContainer = styled.ScrollView`
   flex-direction: row;
-  margin-bottom: 10px;
+  min-height: 45px;
+  margin-bottom: 6px;
 `;
 
 const Tab = styled.TouchableOpacity`
@@ -44,6 +45,6 @@ const TabText = styled.Text`
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
+  color: white;
   letter-spacing: -0.15px;
-  color: ${(props) => props.theme.text};
 `;

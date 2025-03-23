@@ -27,7 +27,7 @@ const GameList = () => {
           <ConOs>
             {item.platform.split(", ").map((platform, index) => (
               <React.Fragment key={index}>
-                {GetIcon(platform, 12, theme.Text, "transparent")}
+                {GetIcon(platform, 12, "transparent", "transparent")}
               </React.Fragment>
             ))}
             {item.platform}
@@ -53,18 +53,15 @@ const GameList = () => {
   );
 
   return (
-    <View>
-      <FlatList
-        data={games}
-        renderItem={renderGameItem}
-        keyExtractor={() => UUID.v4()}
-        onEndReached={loadMoreGames}
-        showsVerticalScrollIndicator={false}
-      />
-    </View>
+    <FlatList
+      data={games}
+      renderItem={renderGameItem}
+      keyExtractor={() => UUID.v4()}
+      onEndReached={loadMoreGames}
+      showsVerticalScrollIndicator={false}
+    />
   );
 };
-
 
 const baseTextStyle = `
   font-family: "PingFang-SC-Regular";
@@ -105,9 +102,9 @@ const DiscountBlock = styled.View`
   height: 22px;
   border-radius: 4px;
   background-color: #00d44b80;
-  align-items:center;
+  align-items: center;
   justify-content: center;
-  margin-left:17px;
+  margin-left: 17px;
 `;
 
 const DiscountText = styled.Text`
@@ -117,7 +114,7 @@ const DiscountText = styled.Text`
   line-height: 18px;
   letter-spacing: -0.13px;
   text-transform: uppercase;
-  color: white;
+  color: ${(props) => props.theme.text};
 `;
 const GameInfo = styled.View`
   margin-left: 14px;
@@ -134,19 +131,18 @@ const GameTitle = styled.Text`
 `;
 
 const FdRow = styled.View`
-  display: flex;
   flex-direction: row;
 `;
 
 const ElementList = styled.View`
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   padding: 15px 0;
 `;
 
 const ImgGame = styled.Image`
   border-radius: 8px;
 `;
+
 export default GameList;

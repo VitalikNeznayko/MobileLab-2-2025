@@ -1,24 +1,17 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  ScrollView,
-  TouchableOpacity,
-  StatusBar,
-} from "react-native";
 import MainView from "../components/MainView";
 import GameList from "../components/GameList";
 import { TabList } from "../components/TabList";
-
+import { ScrollGame } from "../components/ScrollGame";
+import styled from "styled-components/native";
 export default function Store() {
   return (
     <MainView>
+      <ScrollGame></ScrollGame>
       <TabList
         tabList={["Top Sellers", "Free to play", "Early Access", "Action"]}
       ></TabList>
-      {/* <GameList></GameList> */}
+        <GameList></GameList>
     </MainView>
   );
 }
-

@@ -1,4 +1,4 @@
-const initialGames = [
+const initialScrollGames = [
   {
     name: "Dead by Daylight",
     price: 5,

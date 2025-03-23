@@ -10,6 +10,7 @@ const loadFonts = async () => {
     "ABeeZee-Regular": require("./assets/fonts/ABeeZee-Regular.ttf"),
     "PlayfairDisplay-VariableFont_wght": require("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf"),
     "PingFang-SC-Regular": require("./assets/fonts/PingFang-SC-Regular.ttf"),
+    "Gilroy-Bold": require("./assets/fonts/Gilroy-Bold.ttf"),
   });
 };
 
