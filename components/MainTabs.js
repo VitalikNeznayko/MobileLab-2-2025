@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 const MainTabs = ({ toggleTheme, isDarkMode }) => {
   return (
     <Tab.Navigator
-      initialRouteName="Chat"
+      initialRouteName="Store"
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           return GetIcon(route.name, size, color, "transparent");
