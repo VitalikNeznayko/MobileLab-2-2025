@@ -57,7 +57,7 @@ const ThemedPress = styled(TouchableOpacity)`
   height: 54px;
   border-width: 1px;
   border-color: #202532;
-  background-color: ${(props) => props.theme.strip};
+  background-color: ${(props) => props.theme.expandedInfo};
   justify-content: space-between;
   padding: 16px 16px;
 `;
@@ -75,7 +75,7 @@ const ExpandedInfo = styled.View`
   height: 54px;
   border-width: 1px;
   border-color: #202532;
-  background-color: ${(props) => props.theme.strip};
+  background-color: ${(props) => props.theme.expandedInfo};
   justify-content: space-between;
   padding: 16px 16px;
 `;
